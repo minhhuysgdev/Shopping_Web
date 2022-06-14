@@ -1,0 +1,152 @@
+.footer .container {
+  width: 100%;
+  background: #f5f5f5;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pd-top {
+  padding-top: 50px;
+}
+
+.footer .flex-di {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer .container .brand,
+.footer .container .content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer .container .content {
+  grid-template-rows: repeat(1, 30vh);
+}
+
+.footer .container .brand span {
+  width: 80%;
+  height: 2px;
+  background: #000;
+}
+
+.footer .container .brand .brand-name {
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.footer .container .brand .brand-name p:first-child {
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 10px;
+  font-family: "Charmonman", cursive;
+}
+
+.footer .container .brand .brand-name p:last-child {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.footer .container .content ul {
+  list-style: none;
+}
+
+.footer .content .menu ul li a {
+  color: #616161;
+}
+
+.footer .content .menu ul li a:hover {
+  color: #212121;
+  font-weight: bold;
+}
+
+.footer .content .social .icon {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+}
+
+.footer > .container > .content > .social > .icon > .icon-item {
+  width: 50px;
+  height: 50px;
+}
+
+.footer .container .content .social .icon .icon-item a {
+  font-size: 35px;
+  width: 100%;
+  height: 100%;
+  color: #000;
+}
+
+.footer .container .content .social .icon .icon-item a:hover {
+  color: #fff;
+  border-radius: 50%;
+  background: #000;
+}
+
+.footer .content .social .line {
+  width: 100%;
+  height: 40%;
+}
+
+.footer .content .social .line span {
+  width: 2px;
+  height: 100%;
+  background: #000;
+}
+
+.footer .newsletter {
+  border-collapse: collapse;
+  padding-bottom: 10px;
+}
+
+.footer .newsletter .tittle {
+  margin: 20px 0;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+.footer .newsletter .box {
+  width: 200px;
+  height: 50px;
+  border: 2px solid #000;
+  /* padding: 20px 40px; */
+}
+
+.footer .newsletter .box:first-child {
+  border-bottom: none !important;
+}
+
+.footer .newsletter .box a {
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+  /* transition: all 2s linear; */
+}
+
+.footer .newsletter .box a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.footer .container .end {
+  padding: 20px 0;
+  justify-content: center;
+  width: 100%;
+  background: #e0e0e0;
+}
+                          

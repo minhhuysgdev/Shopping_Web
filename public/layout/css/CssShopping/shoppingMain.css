@@ -1,0 +1,783 @@
+/* css section recommend */
+
+/* todo banner css */
+
+.dn {
+  display: none;
+}
+
+.recommend-banner {
+  width: 100%;
+  height: 80vh;
+}
+
+.recommend-banner .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 100px;
+  overflow: hidden;
+}
+
+.recommend-banner .bg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 99;
+}
+
+.recommend-banner img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.recommend-banner .banner-box {
+  width: 50%;
+  height: 100%;
+}
+
+.box-right {
+  width: 100%;
+  height: 50%;
+}
+
+.box-top {
+  display: flex;
+}
+
+.box-top2 {
+  width: 50%;
+  height: 100%;
+}
+
+.recommend-banner .tittle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  transition: all 0.5s;
+  flex-direction: column;
+  text-transform: capitalize;
+  color: #fff;
+  background-size: cover;
+}
+
+.recommend-banner .tittle p {
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.recommend-banner .tittle a {
+  font-size: 20px;
+  visibility: hidden;
+  color: #fff;
+}
+
+.bg>img {
+  transition: all .2s linear;
+}
+
+.bg:hover>img {
+  transform: scale(1.2);
+}
+
+.recommend-banner .bg:hover .tittle a {
+  visibility: visible;
+}
+
+.recommend-banner .bg:hover .tittle {
+  width: 80%;
+  height: 80%;
+  background: rgba(3, 3, 3, 0.5);
+}
+
+/* todo slider css */
+
+.recommend-slider {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.full {
+  width: 100%;
+  height: 100%;
+}
+
+.recommend-slider>.container>.slide-item:last-child {
+  background: red;
+}
+
+.recommend-slider>.container>.slide-item>.img>img {
+  width: 100%;
+  height: 100%;
+}
+
+.slide-item {
+  transform: translateX(0%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slide-item .content {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  text-align: center;
+  transform: translateY(0%);
+}
+
+.slide-item .content p {
+  font-size: 80px;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+}
+
+.recommend-slider .next-pre {
+  position: absolute;
+  top: 85%;
+  left: 10%;
+  display: flex;
+  font-size: 35px;
+}
+
+.next-pre>.node {
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.next-pre span:first-child {
+  font-weight: bold;
+}
+
+.next-active {
+  animation: next-show 0.8s forwards;
+}
+
+@keyframes next-show {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.next-active1 {
+  animation: next-show1 0.8s forwards;
+}
+
+@keyframes next-show1 {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.pre-active {
+  animation: pre-show 0.8s forwards;
+}
+
+@keyframes pre-show {
+
+  /* chuyen dong tu phai vao khung hinh */
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.pre-active1 {
+  animation: pre-show1 0.8s forwards;
+}
+
+@keyframes pre-show1 {
+
+  /* chuyen dong tu phai vao khung hinh */
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.up {
+  animation: up 0.8s ease-in-out forwards;
+}
+
+@keyframes up {
+
+  /* chuyen dong tu phai vao khung hinh */
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.down {
+  animation: down 0.8s ease-in-out forwards;
+}
+
+@keyframes down {
+
+  /* chuyen dong tu phai vao khung hinh */
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+/* todo css of trending section */
+.trending .container {
+  width: 100%;
+}
+
+.section-tittle {
+  width: 100%;
+}
+
+.section-tittle .content {
+  flex-direction: column;
+  padding: 10px 30px;
+}
+
+.section-tittle .content h2 {
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+
+.section-tittle .content p {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.section-tittle span {
+  width: 100px;
+  height: 2px;
+  background: #000;
+}
+
+.products {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 400px) auto;
+  grid-gap: 60px;
+  /* grid-gap tá»± Ä‘á»™ng pading top bottom l r cá»§a pháº§n tá»­ grid */
+  padding: 50px 150px;
+}
+
+.col {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.3s linear;
+  border-radius: 10px;
+}
+
+.col:hover {
+  box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.col:hover .product-img .img2 {
+  display: block;
+}
+
+.col:hover .product-img .img2 img {
+  animation: scale 0.3s linear forwards;
+}
+
+.col:hover .product-img .img1 {
+  display: none;
+}
+
+@keyframes scale {
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.product-img {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.product-img img {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  background-size: cover;
+}
+
+.product-img .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: #e0e0e0; */
+  transition: all 0.7s linear;
+}
+
+.product-img .img2 {
+  display: none;
+  z-index: 3;
+}
+
+.col>.product-info {
+  width: 100%;
+  height: 30%;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.product-info .pr-name a {
+  text-align: center;
+  text-overflow: ellipsis;
+  width: 100%;
+  font-size: 25px;
+  color: #000;
+  font-family: "Frank Ruhl Libre", serif;
+}
+
+.product-info .pr-name a:hover {
+  color: #e67e22;
+}
+
+.product-info .pr-name {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: normal;
+}
+
+.product-info .pr-price {
+  width: 100%;
+  height: 40%;
+  letter-spacing: 3px;
+  padding: 5px 10px;
+  font-size: 15px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+
+.product-info .pr-price .cost {
+  text-decoration: line-through;
+  color: #616161;
+  padding-right: 10px;
+}
+
+.product-info .pr-price .pr-sale {
+  color: #f44336;
+}
+
+.hover-button {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s linear;
+  z-index: 9;
+}
+
+.product-img:hover .hover-button {
+  top: 50%;
+  visibility: visible;
+  opacity: 1;
+}
+
+.wishlist {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 9;
+  color: #455a64;
+  font-size: 25px;
+}
+
+.product-img:hover .wishlist {
+  visibility: visible;
+  opacity: 1;
+}
+
+.hover-button .bt {
+  position: relative;
+  /* display: flex;
+  flex-direction: column; */
+  background: #fff;
+  margin: 5px 0;
+  /* padding: 10px 40px; */
+  border-radius: 80px;
+  color: #000;
+  transition: all 0.2s linear;
+  width: 160px;
+  height: 40px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.hover-button .bt:hover {
+  background: #000;
+}
+
+.hover-button .bt span:first-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s linear;
+  transform: translate(-50%, -50%);
+  color: #000;
+  font-weight: 500;
+}
+
+.hover-button>.bt:hover>span:first-child {
+  transform: translate(-50%, -150%);
+}
+
+.hover-button .bt .bt-icon {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-50%);
+  transition: all 0.2s linear;
+  color: #fff;
+  font-size: 20px;
+}
+
+.hover-button>.bt:hover>.bt-icon {
+  transform: translate(-50%, -100%);
+}
+
+.button-show-product {
+  width: 100%;
+  grid-column: 1/5;
+}
+
+.button-show-product button {
+  border: 2px solid #000;
+  border-radius: 50px;
+  padding: 10px 20px;
+  color: #000;
+  background: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  outline: none;
+}
+
+.button-show-product button:hover {
+  background: #000;
+  color: #fff;
+}
+
+.trending .container .sub-products {
+  display: none;
+}
+
+.set-row-product {
+  grid-template-rows: repeat(4, 55vh);
+}
+
+/* todo css of banner section */
+
+.banner-inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  width: 100%;
+  padding: 0 100px;
+  padding-bottom: 50px;
+  overflow: hidden;
+}
+
+.banner-inner .banner-box {
+  overflow: hidden;
+}
+
+.banner-box .banner-img img {
+  width: 100%;
+  height: 100%;
+  transition: all .5s linear;
+}
+
+.banner-inner .banner-img {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-inner .banner-box .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.banner-inner .banner-box .content p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.banner-inner .banner-box .content .tittle {
+  color: #fff;
+}
+
+.tittle h1 {
+  font-size: 25px;
+}
+
+.tittle h2 {
+  font-size: 45px;
+}
+
+.banner .banner-box:hover img {
+  transform: scale(1.2);
+}
+
+/* todo css of section blog */
+.blog .container {
+  width: 100%;
+}
+
+.blog-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  padding: 50px 100px;
+}
+
+.blog-col .img {
+  width: 100%;
+  height: 60%;
+  overflow: hidden;
+}
+
+.blog-col .col-post {
+  width: 100%;
+  height: 40%;
+  font-size: 15px;
+}
+
+.blog-col .img img {
+  width: 100%;
+  height: 100%;
+  transition: all .5s linear;
+}
+
+.post-info {
+  padding: 10px 0;
+}
+
+.post-info>a {
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.post-content {
+  text-align: justify;
+  color: #616161;
+}
+
+.blog-col .img a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  display: block;
+}
+
+.blog-col>.img>a::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 2;
+}
+
+.blog-col:hover>.img>a::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.6s;
+}
+
+.blog-col:hover>.img>a>img {
+  transform: scale(1.2);
+}
+
+/* todo css of modal pop-up */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 20px;
+  z-index: 99;
+  width: 70%;
+  height: 75vh;
+  display: flex;
+  overflow: hidden;
+  padding: 50px;
+  transition: all .4s linear;
+  background: #fff;
+}
+
+.modal-active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-img {
+  width: 40%;
+  height: 100%;
+}
+
+.modal-content {
+  width: 60%;
+  height: 100%;
+}
+
+.modal-btn-close {
+  position: absolute;
+  top: 3%;
+  right: 2%;
+  width: 20px;
+  height: 20px;
+}
+
+.modal-btn-close>button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 50px;
+  background: transparent;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.modal-img>.img-content {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.modal-img>.img-content>a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.modal-img>.img-content>a>img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all .5s linear;
+}
+
+.modal-img>.img-content:hover>a:first-child {
+  display: none;
+}
+
+.modal-img>.img-content:hover>a:last-child>img {
+  transform: scale(1.2);
+}
+
+#pop-up-view {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  z-index: 9;
+  visibility: hidden;
+}
+
+.pop-up-view-active {
+  opacity: 1 !important;
+  pointer-events: all !important;
+  visibility: inherit !important;
+}
+
+.bt-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 9999;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  font-size: 25px;
+  background: transparent;
+  cursor: pointer;
+}
+.bt-top:hover {
+ background: #555;
+ color: #fff;
+}

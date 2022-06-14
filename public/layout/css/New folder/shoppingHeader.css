@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #ffffff;
+}
+body a{
+  text-decoration: none;
+  color: #000;
+}
+header {
+  position: relative;
+}
+.po{
+  position: relative;
+}
+.navigation {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 25px;
+  background: transparent;
+  z-index: 99;
+  transition: all 0.3s linear;
+}
+
+.navigation:hover {
+  background: #fff;
+}
+
+.navigation .menu {
+  grid-column: 1/2;
+}
+
+.navigation .menu .main-menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.navigation .menu .main-menu .menu-item {
+  height: 150%;
+  display: flex;
+  align-items: center;
+  /* padding: 0 5px; */
+}
+
+.navigation>.menu>ul>li:nth-child(even) {
+  padding-left: 10px;
+}
+
+.navigation .menu .main-menu .menu-item:hover .sub {
+  display: flex;
+}
+
+.navigation>.menu>.main-menu>li>a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: #23232c;
+  font-size: 15px;
+  margin: 0 10px;
+  letter-spacing: 2px;
+  /* khoảng cách giữa các kí tự */
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 3px;
+}
+
+.navigation .menu .main-menu .menu-item .active::before {
+  content: "";
+  position: absolute;
+  bottom: 1%;
+  right: 0;
+  width: 0;
+  height: 1px;
+  background: #000;
+  z-index: 5;
+  transition: all 0.5s ease-in-out;
+}
+
+.navigation .menu .main-menu .menu-item .active1::before {
+  width: 100% !important;
+}
+
+.navigation .menu .main-menu .menu-item .active:hover::before {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+.navigation .logo {
+  grid-column: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation>.logo>a {
+  text-decoration: none;
+  color: #000;
+}
+
+.navigation>.logo>a>p {
+  font-size: 35px;
+  font-weight: 900;
+  letter-spacing: 10px;
+  font-family: "Charmonman", cursive;
+}
+
+.navigation .cart {
+  grid-column: 3/4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.cart .search-content {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 120vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  display: none;
+}
+
+.cart .container {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 19;
+}
+
+.cart .container .search-form {
+  width: 60%;
+  position: relative;
+  padding: 50px 0;
+}
+
+
+.search-form input {
+  width: 100%;
+  padding: 10px 25px;
+  outline: none;
+  font-size: 20px;
+}
+
+.search-form input::placeholder {
+  font-size: 20px;
+}
+
+.search-form .po a {
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  transform: translateY(-50%);
+  text-decoration: none;
+  font-size: 18px;
+  color: #000;
+}
+
+.search-form a i {
+  font-size: 20px;
+}
+
+.cart .close {
+  position: absolute;
+  top: 5%;
+  right: 8%;
+  z-index: 11;
+  font-size: 30px;
+}
+
+.search-results {
+  width: 60%;
+  height: auto;
+}
+
+.search-results .result {
+  padding: 25px 0;
+  display: flex;
+  text-decoration: none;
+  color: #000;
+}
+
+.search-results .result .result-img img{
+  width: 105px;
+  height: 100%;
+}
+.search-results .result .result-meta{
+  padding-left: 10px;
+}
+.search-results .result .result-meta .product-name{
+  font-weight: 700;
+}
+.search-results .result .result-meta .cost{
+  color: #FB8C00;
+  padding-top: 10px;
+}
+.search-results .result .result-meta .cost:hover{
+  color: #EF6C00;
+}
+.navigation>.cart>.icon>a {
+  text-decoration: none;
+  margin: 0 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: 17px;
+}
+
+.navigation .cart .amount {
+  display: inline-flex;
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #ffffff;
+  background: #000;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2px;
+}
+
+.sub {
+  width: 90%;
+  height: 55vh;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 24%);
+  display: none;
+  background: #fff;
+}
+
+.sub .sub-menu {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.sub .sub-menu .sub-item {
+  margin: 20px 0;
+}
+
+.sub .sub-menu .sub-item a {
+  text-decoration: none;
+}
+
+.sub>.sub-menu>.sub-item>a {
+  color: #23232c;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.sub .sub-menu .child-menu {
+  list-style: none;
+}
+
+.sub .sub-menu .child-menu li {
+  padding: 10px 0;
+}
+
+.sub .sub-menu .child-menu li:hover a {
+  text-decoration: underline;
+  color: #424242 !important;
+}
+
+.sub .sub-menu .child-menu li a {
+  font-size: 15px;
+  color: #212121;
+}
+
+.sub>.slider {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sub>.slider>.slider-img {
+  width: 80%;
+  height: 75%;
+  position: relative;
+  overflow: hidden;
+}
+
+.sub>.slider>.slider-img>.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sub>.slider>.slider-img>.slide>img {
+  width: 100%;
+  height: 100%;
+}
+
+.sub .slider .slider-node {
+  margin-top: 20px;
+}
+
+.sub .slider .slider-node ul {
+  display: flex;
+}
+
+.sub .slider .slider-node ul li {
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  background: #bdbdbd;
+  margin: 0 5px;
+  border-radius: 50%;
+}
+
+.active2 {
+  animation: show 1.2s forwards;
+}
+
+@keyframes show {
+
+  /* chuyen dong tu phai vao khung hinh */
+  0% {
+    transform: translate(50%, -50%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+.active3 {
+  animation: show1 1.2s forwards;
+}
+
+@keyframes show1 {
+
+  /* chuyen dong tu khung hinh sang trai */
+  0% {
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+    transform: translate(-150%, -50%);
+  }
+}
+
+
+/* class  for js */
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.color1 {
+  background: #616161 !important;
+}
+
+.hide-menu {
+  transform: translateY(-100%);
+}
+
+.show-search {
+  display: block !important;
+}
+.color-red{
+  color: #D32F2F !important;
+}
+
+
+/*todo slider css */
